@@ -16,8 +16,9 @@ function addTodo() {
   newTodo.value = ''
 }
 
-function removeTodo(todo_key) {
-  todos.value = todos.value.filter(t => t.id !== todo_key)
+function removeTodo(idx) {
+  console.log(idx);
+  todos.value.splice(idx, 1);
 }
 </script>
 
@@ -28,9 +29,9 @@ function removeTodo(todo_key) {
   </form>
   <br>
   <ul>
-    <li v-for="todo in todos" :key="todo.id">
+    <li v-for="(todo, index) in todos" :key="todo.id">
       {{ todo.id }} : {{ todo.text }}
-      <button @click="removeTodo(todo.id)">X</button>
+      <button @click="removeTodo(index)">X</button>
     </li>
   </ul>
 </template>
