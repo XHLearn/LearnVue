@@ -1,15 +1,20 @@
 <script setup>
-import { ref } from 'vue'
+import { mounted, ref } from 'vue'
 
 const awesome = ref(true)
 
 function toggle() {
   awesome.value = !awesome.value;
-}
+};
+
+mounted(){
+  this.$eventBus.$on('keydown', this.handleKeyDown);
+};
+
 </script>
 
-<template>
-  <button @click="toggle">Toggle</button>
+<template @keydown.alt.s="toggle">
+  <button @click="toggle" @keydown.alt.q="toggle">Toggle</button>
   <h1 v-if="awesome">Vue is awesome!</h1>
-  <h1 v-else>Oh no 😢</h1>
+  <h1 v-else>Oh nso 😢</h1>
 </template>
