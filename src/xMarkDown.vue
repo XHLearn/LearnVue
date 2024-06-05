@@ -33,7 +33,6 @@ body {
   display: flex;
 }
 
-.input,
 .output {
   overflow: auto;
   width: 50%;
@@ -46,6 +45,7 @@ body {
   border: none;
   border-right: 1px solid #ccc;
   resize: none;
+  width: 50%;
   outline: none;
   background-color: #f6f6f6;
   font-size: 14px;
