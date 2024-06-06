@@ -9,7 +9,8 @@ import { createApp } from 'vue'
 // import App from './xForAttr.vue'
 // import App from './xTest.vue'
 // import App from './xMarkDown.vue'
-import App from './xMarkDown2.vue'
+// import App from './xMarkDown2.vue'
+import App from './side.vue'
 
 createApp(App).mount('#app')
 
