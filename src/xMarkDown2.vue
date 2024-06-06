@@ -1,11 +1,12 @@
 <template>
   <div>
-    <div v-html="content"></div>
+    <div v-html="content" class="markdown-body"></div>
   </div>
 </template>
 
 <script>
 import { marked } from 'marked'
+import "github-markdown-css"
 export default {
    data(){
      return {
